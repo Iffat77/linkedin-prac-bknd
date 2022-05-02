@@ -1,0 +1,35 @@
+<button id="login-button" type="button">Login</button>
+
+
+<script>
+
+  let csrftoken = null
+
+  fetch('http://localhost:8000/get-csrf-token/')
+    .then(response=> response.json())
+    .then(data => console.log(data))
+    .then(error => console.error(error))
+
+//   fetch('http://localhost:8000/get-csrf-token/')
+//   .then(response => { csrftoken = response.headers.get('X-CSRFToken')})
+//   .catch(error => console.error(error))
+
+// let loginButton = document.getElementById('login-button')
+// let login = function(){
+//   fetch(
+//     'http://localhost:8000/login/',
+//     {
+//       method: 'POST',
+//       headers: {
+//         'X-CSRFToken': csrftoken,
+//         'Content-Type': 'application/json'
+//       },
+//       credentials: 'include',
+//       body: json.strinify({username: 'admin', password: '1234'})
+//     }
+//   )
+// }
+// loginButton.addEventListener('click', login)
+
+
+</script>
